@@ -1,41 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>The Unofficial Homestuck Collection</title>
-  <meta charset="utf-8" />
-  <link rel="stylesheet" href="style.css" ></style>
-  <link rel="icon" type="image/png" href="favicon.png"/>
+{% extends 'lib/base.html.j2' %}
+{% import 'lib/lib.html.j2' as lib with context %}
 
-  <meta name="description" content="An offline browser built from the ground up to archive Homestuck and its related works. It's everything you could "> 
+{% block title %}FAQ{% endblock %}
 
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="THE UNOFFICIAL HOMESTUCK COLLECTION - 2.0" />
-  <meta property="og:description" content="An offline browser built from the ground up to archive Homestuck and its related works. Now with mod support!" />
-  <meta property="og:image" content="/unofficial-homestuck-collection/images/thumbnail.png" />
-
-  <script src="https://kit.fontawesome.com/b08012a568.js" crossorigin="anonymous"></script>
-  <script data-goatcounter="https://tuhc.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-</head>
-<body>
+{% block body %}
 <div class="card">
-  
-  <div class="logoBox">
-    <a href="index.html">
-      <video autoplay loop muted >
-        <source src="images/collection_logo_v2.webm" type="video/webm">
-        <source src="images/collection_logo_v2.mp4" type="video/mp4">
-        <img src="images/collection_logo_v2.png"/>
-      </video>
-    </a>
-  </div>
+  {{ lib.logo() }}
 
   <div class="cardContent">
    <h2>FREQUENTLY ASKED QUESTIONS</h2>
-
       <h3>Okay, so what's actually in it?</h3>
       <p>That's an extremely good question. The issue with this is that it's so damn large I can't even remember everything inside off the top of my head. Here's a by-no-means exhaustive list:</p>
       <div class="log logHidden" id="collectionContents">
-        <button class="logButton" onclick="document.getElementById('collectionContents').classList.toggle('logHidden')">archive contents</button>
+        <button class="logButton"
+          onclick="document.getElementById('collectionContents').classList.toggle('logHidden')">
+          archive contents
+        </button>
         <div class="logContent">
           <ul>
             <li>Homestuck</li>
@@ -98,13 +78,11 @@
       </p>
 
       <h3>Something went wrong! Where can I report it?</h3>
-      <p>        
+      <p>
         <a href="https://github.com/GiovanH/unofficial-homestuck-collection/issues/new?assignees=&labels=bug&template=bug_report.md&title=" target="_blank" class="anchorButton bugreport "><i class="fas fa-bug"></i> Report a bug</a>
         <a href="https://github.com/GiovanH/unofficial-homestuck-collection/issues/new?labels=enhancement&template=feature_request.md&title=" target="_blank" class="anchorButton"><i class="fas fa-comment"></i> Request a feature</a>
       </p>
     </div>
   </div>
 </div>
-
-</body>
-</html>
+{% endblock %}

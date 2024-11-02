@@ -1,0 +1,23 @@
+{% extends 'lib/base.html.j2' %}
+{% import 'lib/lib.html.j2' as lib with context %}
+
+{% block title %}Howto{% endblock %}
+
+{% block body %}
+<div class="card">
+  {{ lib.logo() }}
+
+  <div class="cardContent">
+   <h2>HOW TO EXTRACT THE ASSET PACK</h2>
+   <p>The Unofficial Homestuck Collection and the Asset Pack V2 are usually provided as a .ZIP download. To use them, you will need to EXTRACT the files. Here's a quick tutorial for Windows:</p>
+
+   <p><img src="images/upgrade/image1.png"></p>
+   <p><img src="images/upgrade/image2.png"></p>
+   
+   <p>Depending on your hardware, the extraction may take some time!<br>
+   You may have programs like WinRAR or 7-Zip installed that may alter the options to EXTRACT the .ZIP. For example:</p>
+   
+   <p><img src="images/upgrade/image3.png"></p>
+  </div>
+</div>
+{% endblock %}
