@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>The Unofficial Homestuck Collection</title>
+  <title>{% block title %}{% endblock %} | The Unofficial Homestuck Collection</title>
   <meta charset="utf-8" />
   <link rel="stylesheet" href="style.css" ></style>
   <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <meta name="description" content="An offline browser built from the ground up to archive Homestuck and its related works. It's everything you could ">
+  <meta name="description" content="An offline browser built from the ground up to archive Homestuck and its related works.">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="{% block title %}{% endblock %} | THE UNOFFICIAL HOMESTUCK COLLECTION" />
+  <meta property="og:title" content="{{ self.title() }} | THE UNOFFICIAL HOMESTUCK COLLECTION" />
   <meta property="og:description" content="An offline browser built from the ground up to archive Homestuck and its related works. Now with mod support!" />
-  <meta property="og:image" content="/unofficial-homestuck-collection/images/thumbnail.png" />
+  <meta property="og:image" content="./images/thumbnail.png" />
 
   <script src="https://kit.fontawesome.com/b08012a568.js" crossorigin="anonymous"></script>
   <script data-goatcounter="https://tuhc.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>

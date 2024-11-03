@@ -18,10 +18,10 @@ all: static html
 html: $(HTML_TARGETS) # Render html from j2 templates in src
 
 ./build/%.html: ./src/%.html.j2 $(wildcard ./src/lib/*.html.j2)
-	mkdir -p ./build/
+	@mkdir -p ./build/
 	j2 --print $< > $@
 
 .PHONY: static
 static: # Copy static files
-	mkdir -p ./build/
+	@mkdir -p ./build/
 	cp -r ./static/* ./build/
